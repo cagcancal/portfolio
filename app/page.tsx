@@ -158,11 +158,7 @@ export default function Home() {
       <section id="publications" className="section-shell section-block">
         <div className="eyebrow">03 / Publications</div>
         <div className="split-grid">
-          <h2>
-            Selected
-            <br />
-            publications.
-          </h2>
+          <h2>Publications.</h2>
 
           <div className="publication-list">
             <article className="publication-card">
@@ -179,6 +175,15 @@ export default function Home() {
                 ISRM EUROCK 2024 · New Challenges in Rock Mechanics and Rock
                 Engineering
               </p>
+              <div className="publication-links">
+                <a
+                  href="https://www.scopus.com/pages/publications/85200329083?origin=resultslist&source=sd-apx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Scopus ↗
+                </a>
+              </div>
             </article>
 
             <article className="publication-card">
@@ -192,6 +197,15 @@ export default function Home() {
               </h3>
               <p className="publication-authors">Çal, C.</p>
               <p>University of Toronto · Civil Engineering</p>
+              <div className="publication-links">
+                <a
+                  href="https://www.proquest.com/docview/2830048871?pq-origsite=gscholar&fromopenview=true&sourcetype=Dissertations%20&%20Theses"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View dissertation ↗
+                </a>
+              </div>
             </article>
           </div>
         </div>
@@ -287,11 +301,7 @@ export default function Home() {
             </div>
             <div>
               <span>Research & Technical</span>
-              <p>LaTeX · Inkscape · Technical reporting</p>
-            </div>
-            <div>
-              <span>Languages</span>
-              <p>Turkish · Native<br />English · Advanced</p>
+              <p>Inkscape · Technical reporting</p>
             </div>
           </div>
         </div>

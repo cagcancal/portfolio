@@ -13,6 +13,22 @@
   --accent-light: #e0c188;
   --accent-deep: #937447;
   --page-width: 1440px;
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  --bg: #f3f0e9;
+  --bg-soft: #e9e4da;
+  --bg-card: #faf7f1;
+  --ink: #171b18;
+  --muted: #60635d;
+  --muted-soft: #777a73;
+  --line: rgba(23, 27, 24, 0.18);
+  --line-soft: rgba(23, 27, 24, 0.09);
+  --accent: #8a682f;
+  --accent-light: #a47c39;
+  --accent-deep: #6f5226;
+  color-scheme: light;
 }
 
 * {
@@ -188,6 +204,55 @@ section {
   display: none;
 }
 
+.theme-toggle {
+  min-height: 38px;
+  padding: 0 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 11px;
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.theme-toggle:hover {
+  color: var(--ink);
+  border-color: rgba(210, 177, 115, 0.6);
+  background: rgba(210, 177, 115, 0.06);
+}
+
+.theme-toggle-icon {
+  color: var(--accent);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.theme-toggle-label {
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mobile-theme-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.mobile-theme-row > span {
+  color: var(--muted-soft);
+  font: 400 9px/1 var(--font-mono), monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 /* Hero */
 
 .hero {
@@ -283,6 +348,12 @@ section {
 
 .hero h1 span {
   color: var(--accent);
+}
+
+.hero-surname {
+  display: inline-block;
+  position: relative;
+  top: 0.1em;
 }
 
 .hero-bottom {
@@ -598,6 +669,26 @@ section {
 
 .publication-card .publication-authors {
   color: var(--ink);
+}
+
+.publication-links {
+  margin-top: 20px;
+}
+
+.publication-links a {
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(210, 177, 115, 0.42);
+  color: var(--accent);
+  font: 500 10px/1.4 var(--font-mono), monospace;
+  letter-spacing: 0.06em;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.publication-links a:hover {
+  color: var(--accent-light);
+  border-color: var(--accent);
 }
 
 /* Projects */
@@ -921,6 +1012,82 @@ section {
   margin: 0;
   max-width: 620px;
   line-height: 1.7;
+}
+
+
+/* Light theme overrides */
+
+html[data-theme="light"] body {
+  background:
+    radial-gradient(circle at 76% 20%, rgba(138, 104, 47, 0.09), transparent 29rem),
+    var(--bg);
+}
+
+html[data-theme="light"] .nav-wrap {
+  border-bottom-color: var(--line-soft);
+  background: rgba(243, 240, 233, 0.84);
+}
+
+html[data-theme="light"] .desktop-nav {
+  color: #555a54;
+}
+
+html[data-theme="light"] .topo-bg {
+  color: rgba(23, 27, 24, 0.075);
+}
+
+html[data-theme="light"] .topo-bg::after {
+  background:
+    linear-gradient(90deg, var(--bg) 0%, transparent 31%, transparent 72%, var(--bg) 100%),
+    linear-gradient(0deg, var(--bg) 0%, transparent 36%, transparent 79%, rgba(243, 240, 233, 0.82) 100%);
+}
+
+html[data-theme="light"] .hero-button {
+  color: #ffffff;
+}
+
+html[data-theme="light"] .profile-card {
+  background:
+    linear-gradient(145deg, rgba(138, 104, 47, 0.08), transparent 42%),
+    rgba(250, 247, 241, 0.9);
+  box-shadow:
+    0 28px 70px rgba(45, 37, 24, 0.12),
+    inset 0 0 0 1px rgba(23, 27, 24, 0.02);
+}
+
+html[data-theme="light"] .interest-strip {
+  background: rgba(243, 240, 233, 0.82);
+}
+
+html[data-theme="light"] .interest-track span {
+  color: #656861;
+}
+
+html[data-theme="light"] .publication-card {
+  background:
+    linear-gradient(145deg, rgba(138, 104, 47, 0.055), transparent 45%),
+    rgba(255, 255, 255, 0.34);
+}
+
+html[data-theme="light"] .project-card {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+html[data-theme="light"] .project-card:hover {
+  background: rgba(138, 104, 47, 0.055);
+}
+
+html[data-theme="light"] .mobile-menu {
+  background: rgba(243, 240, 233, 0.98);
+}
+
+html[data-theme="light"] .ideas-teaser::before {
+  background: radial-gradient(circle, rgba(138, 104, 47, 0.075), transparent 64%);
+}
+
+html[data-theme="light"] .theme-toggle:hover {
+  border-color: rgba(138, 104, 47, 0.5);
+  background: rgba(138, 104, 47, 0.05);
 }
 
 /* Responsive */

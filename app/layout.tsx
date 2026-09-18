@@ -2,6 +2,18 @@ import type { Metadata } from "next";
 import { Manrope, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
+const themeInitScript = `
+  (function () {
+    try {
+      var saved = localStorage.getItem("portfolio-theme");
+      var theme = saved === "light" || saved === "dark" ? saved : "dark";
+      document.documentElement.dataset.theme = theme;
+    } catch (e) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  })();
+`;
+
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
@@ -25,7 +37,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className={`${manrope.variable} ${mono.variable}`}>
         {children}
       </body>

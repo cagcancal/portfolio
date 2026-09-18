@@ -52,7 +52,7 @@ export default function Hero() {
           >
             Çağcan
             <br />
-            <span>Çal.</span>
+            <span className="hero-surname">Çal.</span>
           </motion.h1>
 
           <motion.div
@@ -96,10 +96,6 @@ export default function Hero() {
             />
           </div>
 
-          <div className="profile-meta">
-            <span>GEOLOGICAL ENGINEER · RESEARCHER</span>
-            <strong>ANKARA / TÜRKİYE</strong>
-          </div>
         </motion.aside>
       </div>
 

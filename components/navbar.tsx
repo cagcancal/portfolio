@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import ThemeToggle from "@/components/theme-toggle";
 
 const links = [
   { label: "About", href: "/#about" },
@@ -29,6 +30,7 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <ThemeToggle />
           <a className="nav-cta" href="/#contact">
             Contact
           </a>
@@ -65,6 +67,10 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <div className="mobile-theme-row">
+              <span>Theme</span>
+              <ThemeToggle />
+            </div>
             <a href="/#contact" onClick={() => setOpen(false)}>
               Contact ↗
             </a>
