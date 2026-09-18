@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 
@@ -324,10 +325,10 @@ export default function Home() {
               methodological notes and works in progress — designed as a
               personal, research-focused alternative to Medium.
             </p>
-            <a className="text-link" href="/ideas">
+            <Link className="text-link" href="/ideas">
               Visit Ideas & Research Notes
               <span aria-hidden="true">↗</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

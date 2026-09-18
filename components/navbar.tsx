@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import ThemeToggle from "@/components/theme-toggle";
 
@@ -19,21 +20,21 @@ export default function Navbar() {
   return (
     <header className="nav-wrap">
       <nav className="nav-shell" aria-label="Primary navigation">
-        <a className="brand" href="/#top" onClick={() => setOpen(false)}>
+        <Link className="brand" href="/#top" onClick={() => setOpen(false)}>
           <span className="brand-mark">CC</span>
           <span className="brand-name">ÇAĞCAN ÇAL</span>
-        </a>
+        </Link>
 
         <div className="desktop-nav">
           {links.map((link) => (
-            <a key={link.href} href={link.href}>
+            <Link key={link.href} href={link.href}>
               {link.label}
-            </a>
+            </Link>
           ))}
           <ThemeToggle />
-          <a className="nav-cta" href="/#contact">
+          <Link className="nav-cta" href="/#contact">
             Contact
-          </a>
+          </Link>
         </div>
 
         <button
@@ -58,22 +59,22 @@ export default function Navbar() {
             transition={{ duration: 0.22 }}
           >
             {links.map((link, index) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
               >
                 <span>0{index + 1}</span>
                 {link.label}
-              </a>
+              </Link>
             ))}
             <div className="mobile-theme-row">
               <span>Theme</span>
               <ThemeToggle />
             </div>
-            <a href="/#contact" onClick={() => setOpen(false)}>
+            <Link href="/#contact" onClick={() => setOpen(false)}>
               Contact ↗
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

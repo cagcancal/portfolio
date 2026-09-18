@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "@/components/navbar";
 
 const topics = [
@@ -78,7 +79,7 @@ export default function IdeasPage() {
       <footer className="section-shell site-footer">
         <span>ÇAĞCAN ÇAL</span>
         <span>Ideas & Research Notes</span>
-        <a href="/">Return home ↑</a>
+        <Link href="/">Return home ↑</Link>
       </footer>
     </main>
   );

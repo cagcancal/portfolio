@@ -11,6 +11,8 @@ const interests = [
   "GeoAI",
 ];
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function Hero() {
   return (
     <section className="hero" id="top">
@@ -87,7 +89,7 @@ export default function Hero() {
         >
           <div className="profile-photo-shell">
             <Image
-              src="/cagcan-profile.jpg"
+              src={`${basePath}/cagcan-profile.jpg`}
               alt="Portrait of Çağcan Çal"
               width={800}
               height={1000}
