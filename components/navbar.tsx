@@ -28,7 +28,7 @@ export default function Navbar() {
             </a>
           ))}
           <a className="nav-cta" href="mailto:hello@example.com">
-            Contact
+           Contact
           </a>
         </div>
 
