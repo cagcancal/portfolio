@@ -4,10 +4,12 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Research", href: "#research" },
-  { label: "Publications", href: "#publications" },
-  { label: "Experience", href: "#experience" },
+  { label: "About", href: "/#about" },
+  { label: "Research", href: "/#research" },
+  { label: "Publications", href: "/#publications" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Ideas", href: "/ideas" },
 ];
 
 export default function Navbar() {
@@ -16,7 +18,7 @@ export default function Navbar() {
   return (
     <header className="nav-wrap">
       <nav className="nav-shell" aria-label="Primary navigation">
-        <a className="brand" href="#top" onClick={() => setOpen(false)}>
+        <a className="brand" href="/#top" onClick={() => setOpen(false)}>
           <span className="brand-mark">CC</span>
           <span className="brand-name">ÇAĞCAN ÇAL</span>
         </a>
@@ -27,8 +29,8 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a className="nav-cta" href="mailto:hello@example.com">
-           Contact
+          <a className="nav-cta" href="/#contact">
+            Contact
           </a>
         </div>
 
@@ -63,7 +65,9 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a href="mailto:hello@example.com">Contact ↗</a>
+            <a href="/#contact" onClick={() => setOpen(false)}>
+              Contact ↗
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
